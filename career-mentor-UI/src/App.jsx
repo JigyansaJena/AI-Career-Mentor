@@ -5,7 +5,7 @@ import Resume from './Pages/Resume';
 import SkillGap from './Pages/SkillGap';
 import Roadmap from './Pages/Roadmap';
 import Interview from './Pages/Interview';
-import Navbar from './components/Navbar';
+import Navbar from './Components/Navbar';
 import './App.css';
 
 const PrivateRoute = ({ children }) => {
