@@ -1,0 +1,7 @@
+{
+  "name": "career-mentor-hackathon",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "cd career-mentor-UI && npm install && npm run build"
+  }
+}
