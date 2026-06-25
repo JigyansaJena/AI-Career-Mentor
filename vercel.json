@@ -19,8 +19,15 @@
       "dest": "career-mentor-server/index.js"
     },
     {
+      "src": "/assets/(.*)",
+      "dest": "career-mentor-UI/dist/assets/$1"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
       "src": "/(.*)",
-      "dest": "career-mentor-UI/dist/$1"
+      "dest": "career-mentor-UI/dist/index.html"
     }
   ]
 }
