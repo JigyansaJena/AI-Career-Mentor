@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import Login from './pages/Login';
-import Register from './pages/Register';
-import Resume from './pages/Resume';
-import SkillGap from './pages/SkillGap';
-import Roadmap from './pages/Roadmap';
-import Interview from './pages/Interview';
+import Login from './Pages/Login';
+import Register from './Pages/Register';
+import Resume from './Pages/Resume';
+import SkillGap from './Pages/SkillGap';
+import Roadmap from './Pages/Roadmap';
+import Interview from './Pages/Interview';
 import Navbar from './components/Navbar';
 import './App.css';
 
