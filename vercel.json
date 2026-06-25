@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "career-mentor-UI/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    },
+    {
+      "src": "career-mentor-server/index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "career-mentor-server/index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "career-mentor-UI/dist/$1"
+    }
+  ]
+}
