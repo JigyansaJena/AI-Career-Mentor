@@ -8,10 +8,17 @@ connectDB();
 
 const app = express();
 
-// ✅ Replace your current cors() with this
+// Handle preflight requests
+app.options('*', cors({
+  origin: function(origin, callback) {
+    callback(null, true);
+  },
+  credentials: true
+}));
+
 app.use(cors({
   origin: function(origin, callback) {
-    callback(null, true); // allow all
+    callback(null, true);
   },
   credentials: true
 }));
