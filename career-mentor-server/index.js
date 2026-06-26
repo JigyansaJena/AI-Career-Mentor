@@ -10,12 +10,7 @@ const app = express();
 
 // ✅ Replace your current cors() with this
 app.use(cors({
-  origin: [
-    'http://localhost:5173',
-    'https://career-mentor-hackathon-project.vercel.app',
-    'https://career-mentor-hackathon-project-6loaaxgvc.vercel.app',
-    /\.vercel\.app$/  // allows ALL vercel preview URLs
-  ],
+  origin: true,  // allows ALL origins temporarily
   credentials: true
 }));
 
