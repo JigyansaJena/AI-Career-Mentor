@@ -1,34 +1,12 @@
 {
-  "version": 2,
-  "builds": [
+  "rewrites": [
     {
-      "src": "career-mentor-server/index.js",
-      "use": "@vercel/node"
+      "source": "/api/:path*",
+      "destination": "/career-mentor-server/index.js"
     },
     {
-      "src": "career-mentor-UI/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "career-mentor-server/index.js"
-    },
-    {
-      "src": "^/assets/(.*)",
-      "dest": "career-mentor-UI/dist/assets/$1"
-    },
-    {
-      "src": "^/(.*\\.(js|css|ico|png|jpg|svg|json))",
-      "dest": "career-mentor-UI/dist/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "career-mentor-UI/dist/index.html"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
