@@ -8,7 +8,17 @@ connectDB();
 
 const app = express();
 
-app.use(cors());
+// ✅ Replace your current cors() with this
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'https://career-mentor-hackathon-project.vercel.app',
+    'https://career-mentor-hackathon-project-6loaaxgvc.vercel.app',
+    /\.vercel\.app$/  // allows ALL vercel preview URLs
+  ],
+  credentials: true
+}));
+
 app.use(express.json());
 
 app.get('/', (req, res) => {
@@ -20,5 +30,4 @@ app.use('/api/resume', require('./routes/resumeRoutes'));
 app.use('/api/skills', require('./routes/skillRoutes'));
 app.use('/api/interview', require('./routes/interviewRoutes'));
 
-// ✅ Export for Vercel (replaces app.listen)
 module.exports = app;
