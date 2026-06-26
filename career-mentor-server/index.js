@@ -10,7 +10,9 @@ const app = express();
 
 // ✅ Replace your current cors() with this
 app.use(cors({
-  origin: true,  // allows ALL origins temporarily
+  origin: function(origin, callback) {
+    callback(null, true); // allow all
+  },
   credentials: true
 }));
 
