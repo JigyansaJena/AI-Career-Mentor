@@ -31,4 +31,7 @@ app.use('/api/resume', require('./routes/resumeRoutes'));
 app.use('/api/skills', require('./routes/skillRoutes'));
 app.use('/api/interview', require('./routes/interviewRoutes'));
 
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
+
 module.exports = app;
